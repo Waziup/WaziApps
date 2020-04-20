@@ -1,0 +1,18 @@
+{
+	"name": "Hello World Python",
+	"version": "1.0.0",
+	"description": "Hello world sample app written in Python",
+	"private": false,
+	"author": "Waziup",
+	"license": "NA",
+	"wazigate": {
+		"menu": [
+			{
+				"label": "Hello World Python",
+				"icon": "dist/img/2ee9c0acf05de75425f429762ef8c551.svg#app",
+				"href": "#/apps/waziup.hello-world-python/ui/",
+				"items": []
+			}
+		]
+	}
+}

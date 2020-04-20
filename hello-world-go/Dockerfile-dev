@@ -1,0 +1,12 @@
+FROM golang:alpine AS development
+
+ENV GOPATH=/go/
+
+RUN apk add --no-cache \
+    tzdata 
+
+WORKDIR /go/src/
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+# Access to inside the container to compile & develop: 
+# sudo docker exec -it waziup.hello-world-go sh
