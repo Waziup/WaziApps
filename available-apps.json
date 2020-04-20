@@ -1,0 +1,7 @@
+[
+	{ "id": "waziup.hello-world-go", "image": "waziup/hello-world-go:dev"},
+	{ "id": "waziup.hello-world-python", "image": "waziup/hello-world-python:dev"},
+	{ "id": "waziup.wazi-on-sensors", "image": "waziup/wazi-on-sensors:beta"},
+	{ "id": "waziup.wazigate-lora", "image": "waziup/wazigate-lora:v2-beta1"}
+
+]
