@@ -1,2 +1,2 @@
 # WaziApps
-The apps developed specifically for WaziGate v2.0+
+The sample apps developed specifically for WaziGate v2.0+
