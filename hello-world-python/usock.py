@@ -1,10 +1,12 @@
 
-import os, socket, re
+import os
+import socket
+import re
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse
 
 
-sockAddr = "/root/app/proxy.sock" # Default path
+sockAddr = "/root/app/proxy.sock"  # Default path
 
 # ----------------- #
 
@@ -16,11 +18,13 @@ routing["DELETE"] = {}
 
 #-------------------#
 
+
 def routerGET(path, func):
     global routing
     routing["GET"][path] = func
 
 #---------#
+
 
 def routerPOST(path, func):
     global routing
@@ -28,11 +32,13 @@ def routerPOST(path, func):
 
 #---------#
 
+
 def routerPUT(path, func):
     global routing
     routing["PUT"][path] = func
 
 #---------#
+
 
 def routerDELETE(path, func):
     global routing
@@ -55,14 +61,14 @@ class HTTPHandler(BaseHTTPRequestHandler):
                 routPath = key
                 break
         try:
-            resCode, resBody = routing.get(method).get(routPath)(self.path,
-                                                                 body)
+            resCode, resBody, resHeaders = routing.get(method).get(routPath)(self.path,
+                                                                             body)
         except Exception as e:
             print("Error: ", e)
             resCode = 404
             resBody = b"Not found"
 
-        self.send(resCode, resBody)
+        self.send(resCode, resBody, resHeaders)
 
     #---------------#
 
@@ -79,11 +85,18 @@ class HTTPHandler(BaseHTTPRequestHandler):
 
     #---------------#
 
-    def send(self, code, reply):
+    def send(self, code, reply, resHeaders):
         self.client_address = (
             '', )  # avoid exception in BaseHTTPServer.py log_message()
         self.send_response(code)
+
+        # We may need more fixes here, this kind of header is just for content-type
+        if len(resHeaders) > 0:
+            for h in resHeaders:
+                self.send_header('Content-type', h)
+
         # self.send_header('Content-type','text/html')
+        # self.send_header('Content-type: text/html')
         self.end_headers()
         self.wfile.write(reply)
 
