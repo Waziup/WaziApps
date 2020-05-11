@@ -5,14 +5,13 @@
 	"private": false,
 	"author": "Waziup",
 	"license": "NA",
-	"wazigate": {
-		"menu": [
-			{
-				"label": "Hello World Python",
-				"icon": "dist/img/2ee9c0acf05de75425f429762ef8c551.svg#app",
-				"href": "#/apps/waziup.hello-world-python/ui/",
-				"items": []
+	"waziapp": {
+		"menu": {
+			"HelloWorldPython": {
+				"primary": "Hello World Python",
+				"iconSrc": "ui/icon.svg",
+				"href": "#/apps/waziup.hello-world-python/ui/"
 			}
-		]
+		}
 	}
 }

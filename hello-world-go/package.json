@@ -5,14 +5,13 @@
 	"private": false,
 	"author": "Waziup",
 	"license": "NA",
-	"wazigate": {
-		"menu": [
-			{
-				"label": "Hello World Go",
-				"icon": "dist/img/2ee9c0acf05de75425f429762ef8c551.svg#hello",
-				"href": "#/apps/waziup.hello-world-go/ui/",
-				"items": []
+	"waziapp": {
+		"menu": {
+			"HelloWorldGo": {
+				"primary": "Hello World Go",
+				"iconSrc": "ui/icon.svg",
+				"href": "#/apps/waziup.hello-world-go/ui/"
 			}
-		]
+		}
 	}
 }

@@ -7,7 +7,7 @@ services:
     build:
       context: ./
     volumes:
-      # - ./:/root/src/  # Uncomment for development
+      #- ./:/root/src/  # Uncomment for development
       - ./:/root/app # The unix socket has to have this name and be in ./ : proxy.sock
     privileged: false
     environment:

@@ -12,9 +12,12 @@ RUN  apt-get update \
 #----------------------------#
 
 # Uncomment For development
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
-# sudo docker exec -it waziup.hello-world-python sh
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
+
 
 # Uncomment For production
 ENTRYPOINT ["python", "/root/src/main.py"]
 
+
+# Here is how you can access inside your container:
+# sudo docker exec -it waziup.hello-world-python sh
