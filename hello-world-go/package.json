@@ -6,10 +6,11 @@
 	"author": "Waziup",
 	"license": "NA",
 	"waziapp": {
+		"icon": "ui/icon.png",
 		"menu": {
 			"HelloWorldGo": {
 				"primary": "Hello World Go",
-				"iconSrc": "ui/icon.svg",
+				"icon": "ui/menu-icon.svg",
 				"href": "#/apps/waziup.hello-world-go/ui/"
 			}
 		}
