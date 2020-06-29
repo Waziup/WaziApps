@@ -1,0 +1,53 @@
+.fancy {
+    position: relative;
+    background-color: #EEE;
+    padding: 2rem;
+    text-align: center;
+    width: 70%;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+  
+
+.center {
+    margin-top: 12%;
+    text-align: center;
+}
+
+.inset h2 {
+    color: #444444;
+    /* text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc; */
+}
+
+#json{
+    text-align: left;
+    background-color: #555;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+#list{
+    margin: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 5px;
+}
+#list div{
+    width:100%;
+    float:left;
+    text-align:left;
+    margin-top: 5px;
+    padding: 8px 3px;
+}
+
+#list div:nth-of-type(odd) { background-color: #CCC; }
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 50%;
+}

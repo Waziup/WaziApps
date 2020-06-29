@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  wazigate-static-server:
+    image: waziup/wazigate-static-server:latest
+    container_name: waziup.wazigate-static-server
+    build:
+      context: ./
+      # dockerfile: Dockerfile-dev
+    volumes:
+      - ./:/go/src/  # We need it for development
+      - ./:/root/app # The unix socket has to have this name and be in ./ : proxy.sock
+    privileged: false
+    environment:
+      - TEST_VAR=1
+    healthcheck:
+      test: curl --fail --unix-socket /root/app/proxy.sock http://localhost/ || exit 1
+      interval: 30s
+      retries: 10 # Will try for 5 minutes

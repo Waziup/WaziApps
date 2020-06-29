@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  hello-world-js:
+    image: waziup/hello-world-js:latest
+    container_name: waziup.hello-world-js
+    build:
+      context: ./
+    volumes:
+      - ./:/root/app  # Do not chnage this
+      - ./ui:/root/ui # Comment out for production mode
+    privileged: false
+    healthcheck:
+      test: curl --fail --unix-socket /root/app/proxy.sock http://localhost/ || exit 1
+      interval: 30s
+      retries: 10 # Will try for 5 minutes

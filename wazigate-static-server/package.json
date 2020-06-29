@@ -1,0 +1,18 @@
+{
+	"name": "Wazigate Static Server",
+	"version": "1.0.0",
+	"description": "waziup.wazigate-static-server",
+	"private": false,
+	"author": "Waziup",
+	"license": "NA",
+	"waziapp": {
+		"icon": "icon.svg",
+		"menu": {
+			"WaziStaticServer": {
+				"primary": "Wazigate Static Server",
+				"icon": "./menu-icon.svg",
+				"href": "#/apps/waziup.wazigate-static-server/"
+			}
+		}
+	}
+}
