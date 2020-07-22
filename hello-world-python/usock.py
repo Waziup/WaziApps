@@ -49,13 +49,13 @@ def routerDELETE(path, func):
 
 #-------------------#
 
-
 class HTTPHandler(BaseHTTPRequestHandler):
-
+    # protocol_version = "HTTP/1.1"
     #---------------#
     def callAPI(self, method="GET", body=""):
         inPath = urlparse(self.path).path
         routPath = ""
+        # print( body)
         for key in routing.get(method):
             if re.match(r"^" + key + "$", inPath):
                 routPath = key
@@ -78,10 +78,28 @@ class HTTPHandler(BaseHTTPRequestHandler):
     #---------------#
 
     def do_POST(self):
-        size = int(self.headers.get('Content-Length', 0))
+        size = int(self.headers.get('Content-length', 0))
         body = self.rfile.read(size)
+        # fields = urlparse.parse_qs(body)
 
         self.callAPI("POST", body)
+
+    #---------------#
+
+    def do_PUT(self):
+        size = int(self.headers.get('Content-length', 0))
+        body = self.rfile.read(size)
+        # fields = urlparse.parse_qs(body)
+
+        self.callAPI("PUT", body)
+
+    #---------------#
+
+    def do_DELETE(self):
+        size = int(self.headers.get('Content-length', 0))
+        body = self.rfile.read(size)
+
+        self.callAPI("DELETE", body)
 
     #---------------#
 
@@ -96,7 +114,6 @@ class HTTPHandler(BaseHTTPRequestHandler):
                 self.send_header('Content-type', h)
 
         # self.send_header('Content-type','text/html')
-        # self.send_header('Content-type: text/html')
         self.end_headers()
         self.wfile.write(reply)
 
