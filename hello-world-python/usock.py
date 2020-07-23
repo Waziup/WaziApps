@@ -67,6 +67,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
             print("Error: ", e)
             resCode = 404
             resBody = b"Not found"
+            resHeaders = []
 
         self.send(resCode, resBody, resHeaders)
 
