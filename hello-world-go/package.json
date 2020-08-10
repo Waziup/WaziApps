@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "Hello world sample app written in GoLang",
 	"private": false,
-	"author": "Waziup",
+	"author": {
+		"name": "Waziup"
+	},
 	"license": "NA",
 	"waziapp": {
 		"icon": "ui/icon.png",

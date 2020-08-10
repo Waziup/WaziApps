@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Hello world sample app written in Javascript",
 	"private": false,
-	"author": "Waziup",
+	"author": { "name": "Waziup"},
 	"license": "NA",
 	"waziapp": {
 		"icon": "icon.svg",
