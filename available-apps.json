@@ -1,4 +1,5 @@
 [
+	{ "id": "waziup.dummy-sensor-data", "image": "waziup/dummy-sensor-data:latest"},
 	{ "id": "waziup.hello-world-go", "image": "waziup/hello-world-go:dev"},
 	{ "id": "waziup.hello-world-python", "image": "waziup/hello-world-python:dev"},
 	{ "id": "waziup.hello-world-js", "image": "waziup/hello-world-js:latest"},
