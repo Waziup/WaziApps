@@ -1,8 +1,8 @@
 [
-	{ "id": "waziup.dummy-sensor-data", "image": "waziup/dummy-sensor-data:latest"},
-	{ "id": "waziup.hello-world-go", "image": "waziup/hello-world-go:dev"},
-	{ "id": "waziup.hello-world-python", "image": "waziup/hello-world-python:dev"},
-	{ "id": "waziup.hello-world-js", "image": "waziup/hello-world-js:latest"},
-	{ "id": "waziup.wazi-on-sensors", "image": "waziup/wazi-on-sensors:beta"},
-	{ "id": "waziup.wazigate-lora", "image": "waziup/wazigate-lora:latest"}
+	{ "id": "waziup.dummy-sensor-data", "image": "waziup/dummy-sensor-data:latest", "description": "Generate dummy sensor data for testing"},
+	{ "id": "waziup.hello-world-go", "image": "waziup/hello-world-go:dev", "description": "Hello world sample app written in GoLang"},
+	{ "id": "waziup.hello-world-python", "image": "waziup/hello-world-python:dev", "description": "Hello world sample app written in Python"},
+	{ "id": "waziup.hello-world-js", "image": "waziup/hello-world-js:latest", "description": "Hello world sample app written in Javascript"},
+	{ "id": "waziup.wazi-on-sensors", "image": "waziup/wazi-on-sensors:beta", "description": "Wazigate On board Sensors"},
+	{ "id": "waziup.wazigate-lora", "image": "waziup/wazigate-lora:latest", "description": "Support for LoRaWAN for WaziGate"}
 ]
